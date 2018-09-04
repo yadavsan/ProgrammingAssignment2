@@ -33,3 +33,17 @@ cacheSolve <- function(l, ...) {
         l$setInverse(inv)
         inv
 }
+
+## Please find below output
+> specialMatrix<- makeCacheMatrix(matrix(c(10,15,18,20),2, 2))
+> specialMatrix$get() ## Check the "matrix" is correct of not
+     [,1] [,2]
+[1,]   10   18
+[2,]   15   20
+> specialMatrix$getInverse() 
+NULL
+> cacheSolve(specialMatrix) ## Inverse of Special matrix
+           [,1]       [,2]
+[1,] -0.2857143  0.2571429
+[2,]  0.2142857 -0.1428571
+
